@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ali Saeed Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">My Portfolio</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Ali Saeed</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Software Engineer  ',
+										'Wordpress Developer  ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>A website Developer</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 2 years of experience</h2> -->
+								<br>
+								<p><a href="https://www.linkedin.com/in/ali-saeed-281b69264"
+										class="btn btn-primary py-3 px-4">LinkedIn</a>
+									<a href="https://github.com/AliSaeed5443"
+										class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/About-me.png" class="img-fluid rounded b-shadow-a"
+												alt="img-about">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Ali Saeed</span></p>
+											<p><span class="title-s">Job Role: </span> <span>Wordpress Developer</span>
+											</p>
+											<p><span class="title-s">Experience: </span> <span>2 Years 3 Months</span>
+											</p>
+											<p><span class="title-s">Address: </span> <span>Karachi, Pakistan</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Wordpress</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Python</span> <span class="pull-right">45%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>WooCommerce</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Speed Optimization</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Website Maintenance</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>With 2 years of hands-on experience in web development and software engineering,
+									supported by a diploma in Software Engineering from Aligarh Technology (2025).
+									Skilled in WordPress development, front-end design, and website customization.
+									Passionate about creating user-friendly, responsive websites and continuously
+									improving technical expertise through practical experience.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Web Development & WordPress
+											Engineering</span>
+									</li>
+									<li class="d-flex"><span>Domain:</span> <span>Web Design, E-commerce
+										</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Diploma in Software Engineering,
+											Aligarh Technology 2025</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Urdu</span></li>
+									<li class="d-flex"><span>Web Tools:</span> <span>Elementor, Squarespace, DB Builder,
+											Wp Bakkery, WooCommerce, cPanel, and WordPress CMS</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>HTML, CSS, Python ,Wordpress,
+											Website Speed Optimization, and Maintenance</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>UI/UX Design, Freelance Web
+											Projects, Learning New Tech, and Travel Photography</span></li>
+
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/ali-saeed-281b69264"
+										class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Passionate Web Developer with 2 years of experience in creating and optimizing dynamic websites.
+						Skilled in WordPress development, front-end customization, and website performance optimization.
+						Strong understanding of web technologies and committed to delivering responsive, user-friendly
+						digital solutions.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024-Present</span>
+						<h2>WordPress Developer</h2>
+						<span class="position">SEOHUB</span>
+						<p class="mt-4">SEOHUB, a fast-growing digital marketing and web development company dedicated
+							to helping businesses enhance their online presence and performance.
+						<ul>
+							<li>Developed and customized dynamic WordPress websites for multiple clients, ensuring
+								responsive design and smooth user experience.</li>
+							<li>Optimized website performance through speed enhancements, caching, and SEO best
+								practices, resulting in improved search rankings.</li>
+							<li>Integrated third-party plugins and payment gateways to enhance website functionality and
+								user engagement.</li>
+							<li>Collaborated with designers and marketing teams to create conversion-focused landing
+								pages and campaign microsites.</li>
+							<li>Regularly maintained and updated websites, resolving technical issues and ensuring site
+								security.</li>
+							<li>Improved overall site performance metrics, achieving up to 40% faster load times and
+								better Core Web Vitals scores.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2013-2024</span>
+						<h2>WordPress Developer</h2>
+						<span class="position">TECHICODERS</span>
+						<p class="mt-4">A technology-driven software and web development company specializing in
+							building innovative digital solutions for businesses worldwide.
+						<ul>
+							<li>Assisted in developing and customizing WordPress websites for client projects.</li>
+							<li>Implemented responsive designs and ensured cross-browser compatibility.</li>
+							<li>Supported the team in maintaining and updating existing websites for performance and
+								security.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023-2025</span>
+						<h2>Diploma in Software Engineering</h2>
+						<span class="position">Aligarh Institute of Technology</span>
+						<p class="mt-4">Grade: First class.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-2022</span>
+						<h2>Higher Secondary School</h2>
+						<span class="position">Leads Schooling System</span>
+						<p class="mt-4">Grade: First class.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/file/d/1pooC79HwS3SwcgSSLUXIKu3mUzL0v21O/view?usp=drivesdk" class="btn btn-primary py-4 px-5">Open CV</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are some of my featured web development projects built with WordPress, HTML, CSS Python.
+						Each project focuses on creating responsive, SEO-friendly, and performance-optimized websites
+						tailored to client needs.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="#" class="block-20 zoom-effect"
+							style="background-image: url('images/Scenturies.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="#">Scenturies
+									– Perfume E-Commerce Website</a></h3>
+							<p>Developed a fully responsive and SEO-optimized e-commerce website for a luxury perfume
+								brand. Integrated product categorization, advanced search, and a seamless checkout
+								experience to enhance customer engagement.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://uniqolo.com/" class="block-20 zoom-effect"
+							style="background-image: url('images/uniqolo.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://uniqolo.com/">Uniqolo – Print-on-Demand T-Shirt
+									Store</a></h3>
+							<p>Built a modern print-on-demand (POD) e-commerce store using WordPress and WooCommerce.
+								Designed a clean, responsive layout and integrated automated order and payment systems
+								for smooth user experience.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="#" class="block-20 zoom-effect"
+							style="background-image: url('images/Vehicle\ globe\ report.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="#">Vehicle Globe Report – Car Service Dashboard</a></h3>
+							<p>Designed and developed a Power BI dashboard for Vehicle Globe to analyze and monitor
+								sales and service performance data across multiple regions. Helped the client make
+								data-driven decisions to enhance operational efficiency.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/royalwrap.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="#">Royal Wrap – Leather Jacket E-Commerce Website</a></h3>
+							<p>Developed a premium e-commerce website for a leather jacket brand using WordPress and
+								WooCommerce. Focused on clean design, high-quality product presentation, and a seamless
+								shopping experience for customers.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="#" class="block-20 zoom-effect"
+							style="background-image: url('images/grandCoffee.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="#">GrandCoffee – Coffee Shop E-Commerce Website</a></h3>
+							<p>Developed an elegant and responsive e-commerce website for a local coffee brand using
+								WordPress and WooCommerce. Focused on showcasing premium coffee products, improving
+								online orders, and enhancing the brand’s digital presence.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="20">0</strong>
+							<span>Achievements</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="30">0</strong>
+							<span>Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="75">0</strong>
+							<span>Happy Clients</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="50">0</strong>
+							<span>Websites Maintained</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I love building responsive and user-friendly websites using WordPress. From custom themes
+							to plugin integrations, my projects focus on creating fast, SEO-optimized, and visually
+							engaging web experiences.</h4>
+						<br>
+						<p><a href="https://github.com/AliSaeed5443" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Karachi, Pakistan</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="https://wa.me/923142067978">+92 314 2067 978</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:alisaeed7t7@gmail.com">alisaeed7t7@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Open Resume</h3>
+						<p><a href="https://drive.google.com/file/d/1pooC79HwS3SwcgSSLUXIKu3mUzL0v21O/view?usp=drivesdk">resumelink</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a href="mailto:alisaeed@gmail.com" class="btn btn-primary py-3 px-5">Click
+									Here</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/ali-saeed-281b69264"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.facebook.com/share/17UUEP41Fb/"><span
+									class="icon-facebook"></span></a></li>
+						<li class="ftco-animate"><a
+								href="https://www.instagram.com/ali.saeed_7t7?igsh=MTloemtoMTJsZzl2cw=="><span
+									class="icon-instagram"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p>
+						© 2025 All rights reserved | Designed & Developed by
+						<a href="https://www.linkedin.com/in/ali-saeed-281b69264" target="_blank">Ali Saeed</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
